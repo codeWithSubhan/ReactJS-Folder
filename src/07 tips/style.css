@@ -1,0 +1,9 @@
+body {
+  margin-top: 50px;
+}
+div {
+  text-align: center;
+}
+div input {
+  margin-left: 10px;
+}

@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Flex {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+td,
+th,
+input,
+button {
+  text-align: center;
+  padding: 5px;
+}
+button {
+  cursor: pointer;
+}
+button[action='form'] {
+  margin-top: 5px;
+  width: 100%;
+}
+h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.create_user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal {
+  max-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 505;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 3px 22px -13px;
+  /* backdrop-filter: blur(1px); */
+}
+.modal div {
+  text-align: end;
+  padding: 5px;
+  padding-right: 6px;
+  cursor: pointer;
+}
+.modal table td,
+.modal th {
+  text-align: left;
+}
+.modal table {
+  padding: 20px;
+}
