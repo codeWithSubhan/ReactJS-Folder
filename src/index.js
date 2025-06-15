@@ -1,7 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// import App from "./01 Interview/it Does/App";
+// import App from "./01 Interview/02 interview/App";
+import App from "./01 Interview/03 interview/App";
+// import App from "./01 Interview/04 Interview/App";
+// import App from "./01 Interview/useMemo";
+// import App from "./01 Interview/useMemo";
 
-import App from "./01 Interview/it Does/App";
+// import App from "./01 Interview/05 Interview/App";
+
 // import App from './TO DO APP YOUTUBE/App';
 
 // ************ START HERE **************
@@ -102,9 +109,9 @@ import App from "./01 Interview/it Does/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  // <React.StrictMode>
-  <App />
-  // </React.StrictMode>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
 // before 18v

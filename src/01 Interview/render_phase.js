@@ -1,139 +1,8 @@
-import React, { useState } from "react";
-import "./style.css";
-const content = [
-  {
-    summary: "React is a library for building UIs",
-    details:
-      "Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  },
-  {
-    summary: "State management is like giving state a home",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  },
-  {
-    summary: "We can think of props as the component API",
-    details:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  },
-];
-
-export default function App() {
-  const jsx = (
-    <h1>
-      subhan
-      <span>khan</span>
-    </h1>
-  );
-  return (
-    <div>
-      <Tabbed content={content} />
-    </div>
-  );
-}
-// console.log(<DifferentContent item={5}/>)
-// console.log(DifferentContent())
-function Tabbed({ content }) {
-  const [activeTab, setActiveTab] = useState(0);
-
-  return (
-    <div>
-      <div className="tabs">
-        <Tab num={0} activeTab={activeTab} onClick={setActiveTab} />
-        <Tab num={1} activeTab={activeTab} onClick={setActiveTab} />
-        <Tab num={2} activeTab={activeTab} onClick={setActiveTab} />
-        <Tab num={3} activeTab={activeTab} onClick={setActiveTab} />
-      </div>
-
-      {activeTab <= 2 ? (
-        <TabContent item={content.at(activeTab)} key={activeTab} />
-      ) : (
-        <DifferentContent />
-      )}
-    </div>
-  );
-}
-function Tab({ num, activeTab, onClick }) {
-  return (
-    <button
-      className={activeTab === num ? "tab active" : "tab"}
-      onClick={() => onClick(num)}
-    >
-      Tab {num + 1}
-    </button>
-  );
-}
-
-function TabContent({ item }) {
-  const [showDetails, setShowDetails] = useState(true);
-  const [likes, setLikes] = useState(0);
-
-  console.log("RENDER");
-  function handleInc() {
-    setLikes(likes + 1);
-  }
-  function handleUndo() {
-    // setShowDetails(true);
-    setLikes(5);
-    console.log(likes);
-  }
-  function handleTrippleInc() {
-    // setLikes(likes + 1);
-    // setLikes(likes + 1);
-    // setLikes(likes + 1);
-    // console.log(likes);
-    // all output is same due to not render immidetely
-    setLikes((khan) => khan + 1);
-    setLikes((subhan) => subhan + 1);
-    setLikes((taiyeb) => taiyeb + 1);
-    console.log(likes);
-    // Explanation:-
-    // 1.callBack func take state's initial value and return value + 1
-    // 2.then take returning value as a parameter in a callback func then return value + 1
-    // 3.then take returning value as a parameter in a callback func then return value + 1😂.
-    // Note:- still component did not re-render.
-  }
-  function handleUndoLater() {
-    setTimeout(handleUndo, 2000);
-  }
-
-  return (
-    <div className="tab-content">
-      <h4>{item.summary}</h4>
-      {showDetails && <p>{item.details}</p>}
-
-      <div className="tab-actions">
-        <button onClick={() => setShowDetails((h) => !h)}>
-          {showDetails ? "Hide" : "Show"} details
-        </button>
-
-        <div className="hearts-counter">
-          <span>{likes} ❤️</span>
-          <button onClick={handleInc}>+</button>
-          <button onClick={handleTrippleInc}>+++</button>
-        </div>
-      </div>
-
-      <div className="tab-undo">
-        <button onClick={handleUndo}>Undo</button>
-        <button onClick={handleUndoLater}>Undo in 2s</button>
-      </div>
-    </div>
-  );
-}
-function DifferentContent() {
-  return (
-    <div className="tab-content">
-      <h4>I'm a DIFFERENT tab, so I reset state 💣💥</h4>
-    </div>
-  );
-}
-
 // How React Update only updated changes in RealDOM?🙄
 // in reality it update whoal ui at once 😲
 
 // Component >> Instance >>  ReactElement >> Rendered phase >> Commit phase >> Browser paint🤒🤕
-// Note:- ReactElement is created by react.createFunction call
+// Note:- ReactElement is created by react.createElement Function call
 
 // Now also understand How React works behind the scense😀
 // Component:-
@@ -160,8 +29,7 @@ function DifferentContent() {
 // Render is a procees will study write now😎
 
 // Render work
-// 1) All ReactElements created from all instance in component Tree
-// are store in one tree called virtual DOM
+// 1) All ReactElements created from all instance in component Tree are store in one tree called virtual DOM/ReactElement Tree
 
 // virtual DOM:-
 // First Defination: In React all the instance become ReactElement this ReactElement call virtualDOM.

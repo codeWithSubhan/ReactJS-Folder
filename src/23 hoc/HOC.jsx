@@ -9,3 +9,10 @@ export default HOC;
 
 // HOC
 // 1. is an component that takes in another comp and return new comp with enhance version
+
+// HOC can be used for many use cases:
+
+// 1. Code reuse, logic and bootstrap abstraction.
+// 2. Render hijacking.
+// 3. State abstraction and manipulation.
+// 4. Props manipulation.

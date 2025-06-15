@@ -1,94 +1,80 @@
-// =================================================================[1]==============================================================================================//
-// 1. what is reactjs
+// ReactJS Interview Questions:-
 
-// React was created by Jordan Walke, a software engineer at facebook.
-// It was first deployed on Facebook's News Feed in 2011 and later on Instagram in 2012.
-// And On 29 May 2013 React was released.
+// =========================================================== [1] ===========================================================//
+// Question:- Different between state, props
 
-// official definition: React is a JavaScript library for building user interfaces.
-// crazy definition is 😜: React is Declarative, Components-Based and State-Driven JAVASCRIPT LIRAIRY FOR BUILDING USER INTERFACE.
+// Props (Properties)
+// 1. immutable
+// 2. Pass from parent to child.
+// 3. it change when parent data or state change
 
-// declarative: describe what the UI should look like given the data (items), and React takes care of the rest.
-// Components: are the building blocks of user interfaces and can be resuse multiple times.
-// state: is variable that can hold the data of application and can trigger re-render whenever state update and preserved it's value during render
-// library: reactjs is library not a framework
+// State
+// 2. mutable
+// 3. data storage
+// 3. trigger re-render whenever state change
 
-// =================================================================[2]==============================================================================================//
-// 2. different btw library and framework
+// =========================================================== [2] ===========================================================//
+// Question:- How many way to send state from child to parent in react
 
-// library:
-// A library is a collection of pre-written code that developers can use to optimize tasks.
-// It provides a set of functions and utilities that can be called upon to perform specific tasks without having to write the code from scratch.
+// 1. Callback Functions
+// 2. Context API
+// 3. Redux
 
-// Focused: Libraries usually focus on a specific functionality . For example, React is a library for building user interfaces.
-// Examples: react-router-dom, react-toastfy, axios, fetch, leaflet, react-redux, react-spinners, ui material.
+// =========================================================== [2] ===========================================================//
+// Question:- use of section tag and div tag
+// Section Tag
+// 1. Semantics tag
+// 2. wrap the headers, footers,
+// 3. SEO-Friendly
 
-// framework:
-// It includes multiple libraries, and all together create framework. and guidelines for building applications.
+// div Tag
+// 1. non-semantics tag
+// 2. wrap small code of html, css applying
+// 3. N0 SEO-Friendly
 
-// Focused: Frameworks typically cover a wide range of functionalities. For example Angular is a framework for building web applications.
-// Examples: Angular, Django, Ruby, bootstrap, next.js, remix.
+// =========================================================== [3] ===========================================================//
+// 4. how to solve unnecessary re-render
+// Answer:-
+// 1. memo function
+// 2. useMemo
+// 3. useCallback
+// 4. children props
+// 5. redux
+// 6. context Api
+// 7. key (special props: that prevent wasted rendering)
 
-// =================================================================[3]==============================================================================================//
-// what are the features, advantages and disadvantages of reactjs
+// =========================================================== [4] ===========================================================//
+// Question:- consle.log(false==2==='2'==true)
+// Answer:- false
 
-// features/advantages
-// 1. Component-Based
-// 2. Virtual DOM
-// 3. Performance/Faster rendering
-// 4. Declarative
-// 5. JSX(JavaScript Syntax Extension)
-// 6. One-way Data Binding
-// 8. Simplicity
-// 9. SEO-Friendly
-// 10.React Native
-// 11.Development Tools
-// 12.Easy to Learn, Easy to Use
-// 13.Less code
+// =========================================================== [5] ===========================================================//
+// Question:-
+// if (console.log("Hey!")) console.log("ReactJS");
+// else console.log("JS");
+// Answer:- Hey!, JS
 
-// disadvantages
-// 1. programmer need to learn updated as react update or it's library fromework change requently.
-// 2. it's not for cheap website as it's expensive
-// 3. Complexity and Learning Curve:
-// 4. JSX Syntax:
-// 5. many languages need to complate before reach reactjs 😂
+// =========================================================== [6] ===========================================================//
+// Question:- Different between controll and uncontroll componenets
+// Answer:-
+// controlled:- the form data is handled by the state of the component.
+// uncontrolled:- the form data is handled by DOM itself by useRef.
 
-// =================================================================[4]==============================================================================================//
-// what is jsx
+// =========================================================== [7] ===========================================================//
+// Question:- Different between useState and useReducer
+// Answer:-
 
-// jsx: extention of javascript that allows us to embed javascript css and react componenet into html
-// 1. browsers do not understand JSX natively. It simply understand js and html  natively, create-react-app provide babel tools
-// 2. Babel converts JSX into React.createElement function calls that can be understood by the JavaScript engine running in the browser.
-// 3. JSX needs to be converted into standard JavaScript code that the browser can interpret. This is where Babel, comes into play.
-// 4. By converting JSX to React.createElement calls, Babel ensures that the JSX code is translated into a form that React can process to build the virtual DOM.
-// Example:-
+// =========================================================== [8] ===========================================================//
+// Question:- What is virtucalDOM
+// Answer:-
 
-// jsx
-// const element = <h1 className="greeting">Hello, world!</h1>;
-
-// after babel convert it
-// const element = React.createElement(
-//     'h1',
-//     { className: 'greeting' },
-//     'Hello, world!'
-//   );
-
-// rule of jsx
-// 1. attr need to camelCase
-// 2. js expression need to wrap up js mode {}
-// 3. js statement is not allowed in js mode {}
-// 4. js need have one root element
-// 5. every tag need to be closed <br/>
-// 6. inline style need to be an object in js mode {}
-
-// =================================================================[5]==============================================================================================//
-// what is component and types
-// component: are the peace of ui that create whole ui by combine peaces
-
-// tyepes
-// 1. class:-  are ES6 classes that extend from React.Component and have access to lifecycle methods.
-// 2. function:- JavaScript functions. They can use Hooks to manage state and lifecycle events.
-// 3. pure
-// 4. higher order:- take a component and return a new component, adding additional props or behavior.
-// 5. controlled
-// 6. uncontrolled
+// =========================================================== [9] ===========================================================//
+// Question:- How many ways to debug code
+// Answer:-
+// 1. Console Logging
+// 2. debugger
+// 3. breakpoints
+// 4. React Developer Tools
+// 5. Error Boundaries:
+// 6. React Strict Mode:
+// 7. Code Review:
+// 8. eslint
