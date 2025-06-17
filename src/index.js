@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from "./01 Interview/it Does/App";
-// import App from "./01 Interview/02 interview/App";
-import App from "./01 Interview/03 interview/App";
-// import App from "./01 Interview/04 Interview/App";
+import App from "./01 Interview/it Does/App";
 // import App from "./01 Interview/useMemo";
 // import App from "./01 Interview/useMemo";
 
